@@ -1,13 +1,5 @@
 const { Course, Student } = require('../models');
 
-getAllThoughts,
-getSingleThought,
-createThought,
-updateThought,
-deleteThought,
-createReaction,
-deleteReaction
-
 
 module.exports = {
   // Get all courses

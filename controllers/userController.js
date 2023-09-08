@@ -1,42 +1,26 @@
 const { ObjectId } = require('mongoose').Types;
 const { User, Thought } = require('../models');
 
-getAllUsers,
-getSingleUser,
-createUser,
-updateUser,
-deleteUser,
-addFriend,
-removeFriend,
 
 module.exports = {
   // Get all Users
   getAllUsers(req, res) {
     User.find()
-      .then(async (Users) => {
-        const studentObj = {
-          students,
-          headCount: await headCount(),
-        };
-        return res.json(studentObj);
-      })
+      .then((users) => {
+         res.json(users);
+      }) 
       .catch((err) => {
         console.log(err);
         return res.status(500).json(err);
       });
   },
-  // Get a single student
+  // Get a single User
   getSingleUser(req, res) {
-    Student.findOne({ _id: req.params.studentId })
+    User.findOne({ _id: req.params.userId })
       .select('-__v')
-      .then(async (student) =>
-        !student
-          ? res.status(404).json({ message: 'No student with that ID' })
-          : res.json({
-              student,
-              grade: await grade(req.params.studentId),
-            })
-      )
+      .then((user) => {
+        res.json(user);
+     }) 
       .catch((err) => {
         console.log(err);
         return res.status(500).json(err);
