@@ -16,16 +16,16 @@ const userSchema = new Schema(
       unique: true,
       match: [/\w+@\w+(\.\w{2,3})+/,"Invalid Email Address"],
      },
-  thougths:[
+    thougths:[
     {
       type: Schema.Types.ObjectId,
-      ref: "thought"
+      ref: "thought",
     }
-  ],
-  friends: [
+    ],
+    friends: [
     {
       type: Schema.Types.ObjectId,
-      ref: "user"
+      ref: "user",
     }
   ]
   },

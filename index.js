@@ -3,7 +3,7 @@ const db = require('./config/connection');
 const routes = require('./routes');
 
 
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 const app = express();
 
 
@@ -17,3 +17,10 @@ db.once('open', () => {
     console.log(`API server running on port ${PORT}!`);
   });
 });
+
+
+//1. set up index.js
+
+//2. set up models and seeds
+
+//3. set up routes
