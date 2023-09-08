@@ -1,19 +1,21 @@
 const { Schema, model } = require('mongoose');
-const assignmentSchema = require('./Assignment');
+// const assignmentSchema = require('./Assignment');
 
 // Schema to create Student model
 const studentSchema = new Schema(
   {
-    first: {
+    username: {
+      unique: true;
       type: String,
       required: true,
-      max_length: 50,
+      trim: true,
     },
-    last: {
+    email: {
       type: String,
       required: true,
-      max_length: 50,
-    },
+      unique: true,
+      match: [/\w+@\w+.\w{2,3}+/,"Invalid Email Address"],
+     },
     github: {
       type: String,
       required: true,
