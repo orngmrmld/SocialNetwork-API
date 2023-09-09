@@ -14,6 +14,9 @@ THEN I am able to successfully create, update, and delete users and thoughts in 
 WHEN I test API POST and DELETE routes in Insomnia
 THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
 
+## Installation
+Clone github repo and test through insomnia
+
 ### Models
 
 **User**:
@@ -153,3 +156,10 @@ This will not be a model, but rather will be used as the `reaction` field's subd
 * `POST` to create a reaction stored in a single thought's `reactions` array field
 
 * `DELETE` to pull and remove a reaction by the reaction's `reactionId` value
+
+
+
+## Links
+https://github.com/orngmrmld/SocialNetwork-API
+
+https://drive.google.com/file/d/157XGoKQkNBbirzBXhH5pDOoPx-ehjWIY/view?usp=sharing
